@@ -6,7 +6,7 @@ on:
   push:
     paths:
       - 'feeds.json'
-      - 'rss_push.py'
+      - 'RSSPush2Telegram.py'
 
 jobs:
   run-rss:
