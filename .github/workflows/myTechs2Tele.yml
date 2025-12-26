@@ -1,7 +1,10 @@
 name: RSS_Push
 on:
   schedule:
-    - cron: '*/30 * * * *' # 每30分钟运行一次
+    - cron: '*/30 * * * *' # 每30分钟自动运行
+  workflow_dispatch:      # 【新增】手动运行开关，开启后你才能在 Actions 页面看到运行按钮
+  push:                   # 【可选】当你修改代码并提交时，也会立即触发一次
+
 jobs:
   bot:
     runs-on: ubuntu-latest
@@ -9,10 +12,8 @@ jobs:
       - name: Push RSS
         uses: pnd280/rss-push-action@v1.2
         with:
-          # 在仓库 Settings -> Secrets 中添加以下两个变量
           tg-token: ${{ secrets.TELEGRAM_TOKEN }}
           tg-chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # 直接把你的链接列表贴在这里，每行一个
           feed-list: |
             https://evtolinsights.com/feed/
             https://www.urbanairmobilitynews.com/feed/
