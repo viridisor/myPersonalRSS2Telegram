@@ -44,6 +44,13 @@
             "exclude_keywords": ["Podcast"]
         },
         {
+            "url": "https://www.theverge.com/rss/index.xml",
+            "category": "The Verge",
+            "tags": ["#Tech", "#Gadgets", "#SiliconValley"],
+            "include_keywords": [],
+            "exclude_keywords": ["Deal", "Buying Guide"]
+}
+        {
             "url": "https://sifted.eu/tag/autonomous-vehicles/feed/",
             "category": "Sifted EU",
             "tags": ["#EU_Tech", "#Startups"],
