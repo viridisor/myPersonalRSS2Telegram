@@ -1,4 +1,4 @@
-name: myTecRSSPush
+name: RSS_Push
 on:
   schedule:
     - cron: '*/30 * * * *'
@@ -6,23 +6,56 @@ on:
   push:
 
 jobs:
-  rss-job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: RSS to Telegram
-        uses: j_f_v/rss-action@master  # 使用这个稳定的 Action
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # 你的 RSS 链接列表
-          feed_list: |
-            https://evtolinsights.com/feed/
-            https://www.urbanairmobilitynews.com/feed/
-            https://verticalmag.com/category/evtol/feed/
-            https://insideevs.com/rss/category/autonomous-vehicles/
-            https://cnevpost.com/feed/
-            https://techcrunch.com/category/transportation/feed/
-            https://sifted.eu/tag/autonomous-vehicles/feed/
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install feedparser requests
+
+      - name: Run RSS Script
+        env:
+          TG_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<EOF
+          import feedparser
+          import requests
+          import os
+          import time
+
+          token = os.environ['TG_TOKEN']
+          chat_id = os.environ['TG_CHAT_ID']
+          
+          # RSS 列表
+          feeds = [
+              "https://evtolinsights.com/feed/",
+              "https://www.urbanairmobilitynews.com/feed/",
+              "https://verticalmag.com/category/evtol/feed/",
+              "https://insideevs.com/rss/category/autonomous-vehicles/",
+              "https://cnevpost.com/feed/",
+              "https://techcrunch.com/category/transportation/feed/",
+              "https://sifted.eu/tag/autonomous-vehicles/feed/"
+          ]
+
+          for url in feeds:
+              try:
+                  feed = feedparser.parse(url)
+                  # 只取最新的一条防止刷屏
+                  if feed.entries:
+                      entry = feed.entries[0]
+                      text = f"<b>{entry.title}</b>\n\n{entry.link}"
+                      api_url = f"https://api.telegram.org/bot{token}/sendMessage"
+                      payload = {"chat_id": chat_id, "text": text, "parse_mode": "HTML"}
+                      requests.post(api_url, data=payload)
+                      time.sleep(1) # 避开频率限制
+              except Exception as e:
+                  print(f"Error parsing {url}: {e}")
+          EOF
