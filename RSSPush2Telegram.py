@@ -44,11 +44,11 @@ def should_filter(title, feed_config, global_exclude):
         return True
     
     # 3. 包含词过滤（如果配置了，则必须包含其中之一）
-    include = feed_config.get("include_keywords", [])
-    if include and not any(word.lower() in title for word in include):
-        return True
+    #include = feed_config.get("include_keywords", [])
+    #if include and not any(word.lower() in title for word in include):
+    #    return True
     
-    return False
+    #return False
 
 def send_tg_message(entry, feed_config):
     category = feed_config.get("category", "未分类")
