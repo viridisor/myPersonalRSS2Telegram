@@ -1,0 +1,11 @@
+{
+    "feeds": [
+        "https://evtolinsights.com/feed/",
+        "https://www.urbanairmobilitynews.com/feed/",
+        "https://verticalmag.com/category/evtol/feed/",
+        "https://insideevs.com/rss/category/autonomous-vehicles/",
+        "https://cnevpost.com/feed/",
+        "https://techcrunch.com/category/transportation/feed/",
+        "https://sifted.eu/tag/autonomous-vehicles/feed/"
+    ]
+}
