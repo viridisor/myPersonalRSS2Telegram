@@ -1,0 +1,23 @@
+name: RSS_Push
+on:
+  schedule:
+    - cron: '*/30 * * * *' # 每30分钟运行一次
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push RSS
+        uses: pnd280/rss-push-action@v1.2
+        with:
+          # 在仓库 Settings -> Secrets 中添加以下两个变量
+          tg-token: ${{ secrets.TELEGRAM_TOKEN }}
+          tg-chat-id: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # 直接把你的链接列表贴在这里，每行一个
+          feed-list: |
+            https://evtolinsights.com/feed/
+            https://www.urbanairmobilitynews.com/feed/
+            https://verticalmag.com/category/evtol/feed/
+            https://insideevs.com/rss/category/autonomous-vehicles/
+            https://cnevpost.com/feed/
+            https://techcrunch.com/category/transportation/feed/
+            https://sifted.eu/tag/autonomous-vehicles/feed/
