@@ -1,11 +1,54 @@
 {
+    "global_filters": ["Promotion", "Webinar", "Job Alert", "Hiring"],
     "feeds": [
-        "https://evtolinsights.com/feed/",
-        "https://www.urbanairmobilitynews.com/feed/",
-        "https://verticalmag.com/category/evtol/feed/",
-        "https://insideevs.com/rss/category/autonomous-vehicles/",
-        "https://cnevpost.com/feed/",
-        "https://techcrunch.com/category/transportation/feed/",
-        "https://sifted.eu/tag/autonomous-vehicles/feed/"
+        {
+            "url": "https://evtolinsights.com/feed/",
+            "category": "eVTOL Industry",
+            "tags": ["#eVTOL", "#UAM", "#LowAltitude"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        },
+        {
+            "url": "https://www.urbanairmobilitynews.com/feed/",
+            "category": "Urban Air Mobility",
+            "tags": ["#UAM", "#SmartCity"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        },
+        {
+            "url": "https://verticalmag.com/category/evtol/feed/",
+            "category": "Vertical Mag",
+            "tags": ["#Vertical", "#Aerospace"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        },
+        {
+            "url": "https://insideevs.com/rss/category/autonomous-vehicles/",
+            "category": "Autonomous Vehicles",
+            "tags": ["#SelfDriving", "#EV"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        },
+        {
+            "url": "https://cnevpost.com/feed/",
+            "category": "China EV News",
+            "tags": ["#ChinaEV", "#Nio", "#Xpeng"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        },
+        {
+            "url": "https://techcrunch.com/category/transportation/feed/",
+            "category": "TechCrunch Trans",
+            "tags": ["#Transportation", "#TechNews"],
+            "include_keywords": [],
+            "exclude_keywords": ["Podcast"]
+        },
+        {
+            "url": "https://sifted.eu/tag/autonomous-vehicles/feed/",
+            "category": "Sifted EU",
+            "tags": ["#EU_Tech", "#Startups"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        }
     ]
 }
