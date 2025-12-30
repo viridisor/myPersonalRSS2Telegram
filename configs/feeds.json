@@ -1,0 +1,33 @@
+{
+    "global_filters": ["Promotion", "Webinar", "Job Alert", "Hiring"],
+    "feeds": [
+         {
+            "url": "https://www.americanbluesscene.com/feed/",
+            "category": "Blues News",
+            "tags": ["#Blues", "#MusicHistory"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        },
+        {
+            "url": "https://bluesrockreview.com/feed/",
+            "category": "Blues Rock",
+            "tags": ["#Rock", "#Blues"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        },
+        {
+            "url": "https://www.reddit.com/r/blues/.rss",
+            "category": "Blues Community",
+            "tags": ["#Reddit", "#Discussions"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        },
+        {
+            "url": "https://rsshub.app/bandcamp/tag/blues",
+            "category": "Indie Blues",
+            "tags": ["#Bandcamp", "#NewReleases"],
+            "include_keywords": [],
+            "exclude_keywords": []
+        }
+    ]
+}

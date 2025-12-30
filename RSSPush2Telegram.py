@@ -4,12 +4,15 @@ import os
 import time
 import json
 import html
+from src.logger import get_logger
+
+logger = get_logger(__name__)
 
 # 配置
 TOKEN = os.environ.get('TG_TOKEN')
 CHAT_ID = os.environ.get('TG_CHAT_ID')
-DB_FILE = "sent_links.txt"
-CONFIG_FILE = "feeds.json"
+DB_FILE = "data/sent_links.txt"
+CONFIG_FILE = "configs/feeds.json"
 MAX_HISTORY = 1000  # 数据库文件保留的最大条数
 
 def load_config():
@@ -17,7 +20,7 @@ def load_config():
         with open(CONFIG_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:
-        print(f"读取配置失败: {e}")
+        logger.error(f"读取配置失败: {e}")
         return {"feeds": []}
 
 def load_sent_links():
@@ -86,7 +89,7 @@ def send_tg_message(entry, feed_config):
             return requests.post(api_url, data=payload).status_code
         return response.status_code
     except Exception as e:
-        print(f"发送失败: {e}")
+        logger.error(f"发送失败: {e}")
         return None
 
 def main():
@@ -100,25 +103,27 @@ def main():
 
     for f_conf in feeds:
         url = f_conf.get("url")
-        print(f"正在扫描: {f_conf.get('category')} - {url}")
+        logger.info(f"正在扫描: {f_conf.get('category')} - {url}")
         try:
-            feed = feedparser.parse(url)
+            resp = requests.get(url, verify=True)
+            feed = feedparser.parse(resp.content)
+
             for entry in reversed(feed.entries):
                 link = entry.link
                 if link not in history_set:
                     # 关键字过滤逻辑
                     if should_filter(entry.title, f_conf, global_exclude):
-                        print(f"已过滤: {entry.title}")
+                        logger.info(f"已过滤: {entry.title}")
                         continue
                         
                     status = send_tg_message(entry, f_conf)
                     if status == 200:
                         new_links.append(link)
                         history_set.add(link)
-                        print(f"已推送: {entry.title}")
+                        logger.info(f"已推送: {entry.title}")
                         time.sleep(2)
         except Exception as e:
-            print(f"源错误 {url}: {e}")
+            logger.error(f"源错误 {url}: {e}")
 
     # 保存并更新数据库（包含自动清理逻辑）
     save_sent_links(new_links)
