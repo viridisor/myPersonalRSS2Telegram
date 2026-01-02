@@ -28,6 +28,13 @@
             "tags": ["#Bandcamp", "#NewReleases"],
             "include_keywords": [],
             "exclude_keywords": []
+        },
+        {
+            "url": "https://rsshub.app/weibo/user/7916668015",
+            "category": "tennis",
+            "tags": ["#Bandcamp", "#NewReleases"],
+            "include_keywords": [],
+            "exclude_keywords": []
         }
     ]
 }
