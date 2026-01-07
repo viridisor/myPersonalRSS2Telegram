@@ -10,10 +10,12 @@ logger = get_logger(__name__)
 
 # 配置
 TOKEN = os.environ.get('TG_TOKEN')
-CHAT_ID = os.environ.get('TG_CHAT_ID')
+#CHAT_ID = os.environ.get('TG_CHAT_ID')
+CHAT_ID = '2133188601'
 DB_FILE = "data/sent_links.txt"
 CONFIG_FILE = "configs/feeds.json"
 MAX_HISTORY = 1000  # 数据库文件保留的最大条数
+ZEABUR_KEY = os.environ.get('ZEABUR_KEY') # 从环境变量读取 Zeabur Key
 
 def load_config():
     try:
@@ -87,7 +89,9 @@ def send_tg_message(entry, feed_config):
             retry_after = response.json().get('parameters', {}).get('retry_after', 10)
             time.sleep(retry_after)
             return requests.post(api_url, data=payload).status_code
-        return response.status_code
+        else:
+            logger.error(f"telegram return error:",{response})
+            return response.status_code
     except Exception as e:
         logger.error(f"发送失败: {e}")
         return None
@@ -96,6 +100,7 @@ def main():
     config = load_config()
     feeds = config.get("feeds", [])
     global_exclude = config.get("global_filters", [])
+    logger.info(f"telegram parameters :",CHAT_ID)
     
     history_links = load_sent_links()
     history_set = set(history_links)
@@ -105,6 +110,11 @@ def main():
         url = f_conf.get("url")
         logger.info(f"正在扫描: {f_conf.get('category')} - {url}")
         try:
+            if 'zeabur' in url.lower() and ZEABUR_KEY:
+                # 判断原 URL 是否已经带了参数
+                connector = '&' if '?' in original_url else '?'
+                target_url = f"{original_url}{connector}code={ZEABUR_KEY}"
+                print(f"检测到 Zeabur 链接，已注入 Key: {item['name']}")
             resp = requests.get(url, verify=True)
             feed = feedparser.parse(resp.content)
 

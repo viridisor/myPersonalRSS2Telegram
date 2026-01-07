@@ -21,13 +21,6 @@
             "tags": ["#Reddit", "#Discussions"],
             "include_keywords": [],
             "exclude_keywords": []
-        },
-        {
-            "url": "https://rsshub.app/bandcamp/tag/blues",
-            "category": "Indie Blues",
-            "tags": ["#Bandcamp", "#NewReleases"],
-            "include_keywords": [],
-            "exclude_keywords": []
         }
     ]
 }

@@ -1,0 +1,44 @@
+2025-12-30 12:33:26,396 [INFO] [MainThread] RSSPush2Telegram.py:106 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2025-12-30 12:33:28,315 [INFO] [MainThread] RSSPush2Telegram.py:106 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2025-12-30 12:33:37,797 [INFO] [MainThread] RSSPush2Telegram.py:106 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
+2025-12-30 12:33:38,550 [INFO] [MainThread] RSSPush2Telegram.py:106 - 正在扫描: Indie Blues - https://rsshub.app/bandcamp/tag/blues
+2026-01-04 09:59:03,898 [INFO] [MainThread] RSSPush2Telegram.py:106 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-04 09:59:08,091 [INFO] [MainThread] RSSPush2Telegram.py:106 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-04 09:59:13,809 [INFO] [MainThread] RSSPush2Telegram.py:106 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
+2026-01-04 09:59:14,322 [INFO] [MainThread] RSSPush2Telegram.py:106 - 正在扫描: Indie Blues - https://rsshub.app/bandcamp/tag/blues
+2026-01-07 14:34:03,286 [INFO] [MainThread] RSSPush2Telegram.py:107 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:34:09,357 [INFO] [MainThread] RSSPush2Telegram.py:107 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:34:20,622 [INFO] [MainThread] RSSPush2Telegram.py:107 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
+2026-01-07 14:35:13,520 [INFO] [MainThread] RSSPush2Telegram.py:107 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:41:23,196 [INFO] [MainThread] RSSPush2Telegram.py:107 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:41:26,200 [ERROR] [MainThread] RSSPush2Telegram.py:132 - telegram return error
+2026-01-07 14:41:26,201 [INFO] [MainThread] RSSPush2Telegram.py:107 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:41:43,740 [ERROR] [MainThread] RSSPush2Telegram.py:132 - telegram return error
+2026-01-07 14:41:44,993 [ERROR] [MainThread] RSSPush2Telegram.py:132 - telegram return error
+2026-01-07 14:41:46,172 [ERROR] [MainThread] RSSPush2Telegram.py:132 - telegram return error
+2026-01-07 14:41:46,172 [INFO] [MainThread] RSSPush2Telegram.py:107 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
+2026-01-07 14:42:59,952 [INFO] [MainThread] RSSPush2Telegram.py:109 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:43:03,155 [INFO] [MainThread] RSSPush2Telegram.py:109 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:44:25,542 [INFO] [MainThread] RSSPush2Telegram.py:110 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:44:28,453 [INFO] [MainThread] RSSPush2Telegram.py:110 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:44:47,538 [INFO] [MainThread] RSSPush2Telegram.py:110 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:44:50,710 [INFO] [MainThread] RSSPush2Telegram.py:110 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:45:04,617 [INFO] [MainThread] RSSPush2Telegram.py:110 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
+2026-01-07 14:46:59,960 [INFO] [MainThread] RSSPush2Telegram.py:110 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:47:03,251 [INFO] [MainThread] RSSPush2Telegram.py:110 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:47:11,313 [INFO] [MainThread] RSSPush2Telegram.py:110 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
+2026-01-07 14:51:25,828 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:51:29,069 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:51:37,701 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
+2026-01-07 14:51:46,855 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:51:49,904 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:51:58,704 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:52:01,930 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:52:09,189 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
+2026-01-07 14:54:28,699 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues News - https://www.americanbluesscene.com/feed/
+2026-01-07 14:54:32,369 [INFO] [MainThread] RSSPush2Telegram.py:133 - 已推送: Langhorne Slim’s ‘Rock N Roll’ Gets a String-Backed Reimagining in Live Video
+2026-01-07 14:54:34,381 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues Rock - https://bluesrockreview.com/feed/
+2026-01-07 14:54:40,492 [INFO] [MainThread] RSSPush2Telegram.py:133 - 已推送: 10 Blues Rock Songs That Feel Dangerous
+2026-01-07 14:54:44,092 [INFO] [MainThread] RSSPush2Telegram.py:133 - 已推送: Eliza Neals releases “Love Will” ahead of new album
+2026-01-07 14:54:47,514 [INFO] [MainThread] RSSPush2Telegram.py:133 - 已推送: Lil’ Ed & The Blues Imperials announce new album
+2026-01-07 14:54:49,519 [INFO] [MainThread] RSSPush2Telegram.py:111 - 正在扫描: Blues Community - https://www.reddit.com/r/blues/.rss
