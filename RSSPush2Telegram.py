@@ -10,7 +10,7 @@ logger = get_logger(__name__)
 
 # 配置
 TOKEN = os.environ.get('TG_TOKEN')
-#CHAT_ID = os.environ.get('TG_CHAT_ID')
+CHAT_ID = os.environ.get('TG_CHAT_ID')
 DB_FILE = "data/sent_links.txt"
 CONFIG_FILE = "configs/feeds.json"
 MAX_HISTORY = 1000  # 数据库文件保留的最大条数
