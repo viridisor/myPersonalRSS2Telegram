@@ -12,7 +12,7 @@ logger = get_logger(__name__)
 TOKEN = os.environ.get('TG_TOKEN')
 CHAT_ID = os.environ.get('TG_CHAT_ID')
 DB_FILE = "data/sent_links.txt"
-CONFIG_FILE = "configs/feeds.json"
+CONFIG_FILE = "configs/configs/feeds.json"
 MAX_HISTORY = 1000  # 数据库文件保留的最大条数
 ZEABUR_KEY = os.environ.get('ZEABUR_KEY') # 从环境变量读取 Zeabur Key
 

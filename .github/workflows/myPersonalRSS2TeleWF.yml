@@ -1,4 +1,9 @@
 name: myPersonalRSS2TGTask
+uses: actions/checkout@v4
+with:
+    repository: viridisor/JQConfigRepo
+    token: ${{ secrets.CONFIG_REPO_TOKEN }}
+    path: configs
 on:
   schedule:
     - cron: '*/15 * * * *'
